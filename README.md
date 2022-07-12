@@ -1,6 +1,6 @@
 # This repo is created using `npm init wdio`
 
-## This repo shows uses cases of wido logger
+## This repo shows use cases of wido logger
 
 ### There are 3 test cases under `test/specs` folder
 
