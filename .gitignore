@@ -1,0 +1,23 @@
+# Dependencies
+/node_modules
+
+# Generated Files
+/dist
+.idea
+/dist/*
+.eslintcache
+/coverage/*
+/logs
+/errorShots/
+/test-reports
+/allure-report
+/allure-result
+.log
+
+# Configuration Files
+.env
+
+# System files
+.DS_Store
+npm-debug.log
+.vscode/launch.json
