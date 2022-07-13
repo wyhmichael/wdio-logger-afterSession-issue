@@ -39,14 +39,16 @@ const opts2 = {
 
   await myBrowser.url('https://www.google.com');
 
-  // await myBrowser.deleteSession();
+  await myBrowser.deleteSession();
   setTimeout(() => { console.debug("ses1-end"); }, 5000);
 
-  // log of the following is still in log1/wdio.log instead of log2/wdio.log
+  // log of the following is still in log1/wdio.log instead of log2/wdio.log without "process.env.WDIO_LOG_PATH = `log2/wdio.log`;"
+  process.env.WDIO_LOG_PATH = `log2/wdio.log`;
+  setTimeout(() => { console.debug("ses2-start"); }, 6000);
   myBrowser = await remote(opts2);
-  setTimeout(() => { console.debug("ses2-sleep"); }, 6000);
 
-  await myBrowser.url('https://www.google.com');
+  await myBrowser.url('https://www.bing.com');
+  setTimeout(() => { console.debug("ses2-sleep"); }, 6000);
 
   setTimeout(() => { console.debug("ses2 - pre end"); }, 7000);
   await myBrowser.deleteSession();
